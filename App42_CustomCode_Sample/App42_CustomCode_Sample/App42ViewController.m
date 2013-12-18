@@ -68,7 +68,7 @@
     
 }
 
-/*! Resistering For User*/
+/* Resistering For User*/
 - (void) registerUser {
     NSString *_name    = [_nameTextField text];
     NSString *_email   = [_emailTextField text];
@@ -77,8 +77,9 @@
     [App42API initializeWithAPIKey:API_KEY andSecretKey:SECRET_KEY];
     CustomCodeService *_service = [App42API buildCustomCodeService];
     
-    /*! Creating Request Body*/
-    NSDictionary *_requestBody = [NSDictionary dictionaryWithObjectsAndKeys:API_KEY,@"apiKey",
+    /* Creating Request Body*/
+    NSDictionary *_requestBody = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  API_KEY,@"apiKey",
                                   SECRET_KEY,@"secretKey",
                                   @"CustomCodeTestSample",@"moduleName",
                                   _name,@"userName",
